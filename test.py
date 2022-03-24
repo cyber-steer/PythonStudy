@@ -1,14 +1,11 @@
-import turtle
-
-turtle.shape('turtle')
-
-turtle.forward(200)
-turtle.right(90)
-turtle.forward(200)
-turtle.right(90)
-turtle.forward(200)
-turtle.right(90)
-turtle.forward(200)
-turtle.right(90)
-
-turtle.done()
+from turtle import *
+pensize(5)
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(500)
+    left(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+done()
