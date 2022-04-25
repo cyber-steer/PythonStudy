@@ -30,5 +30,14 @@ import random
 # else:
 #     print(f"정답은 {answer}입니다")
 
-for i in range(10,0,1):
-    print(i)
+# a=['a','b','c','d','e']
+# b=[1,2,3]
+# for s in zip(a,b):
+#     print(s)
+#     print(list(s))
+
+list1 = [1,2,3]
+list2 = list1.copy()
+list2.append(4)
+print(list1)
+print(list2)
