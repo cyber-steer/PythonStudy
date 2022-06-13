@@ -4,6 +4,8 @@ from tkinter import *
 import requests
 from datetime import datetime
 
+iconBackgroudColor = "lightgray" # 아이콘 배경색
+backgroudColor = 'white' # 윈도우 배경색
 api_key = '4344b0c5d63fb946ca403d0675a37478'
 
 def search():
@@ -68,41 +70,40 @@ def reset():
 
 window = Tk()
 window.title("Weather")
-
+window.configure(background="white")
 github = "https://github.com/cyber-steer"
 
 icon = PhotoImage(file="icon.png")
 
-cityE = Entry(window)
-searchB = Button(window, text="검색", command=search)
-resetB = Button(window, text="초기화", command=reset)
+cityE = Entry(window, background=backgroudColor)
+searchB = Button(window, text="검색", command=search, background=backgroudColor)
+resetB = Button(window, text="초기화", command=reset, background=backgroudColor)
 
-lonL = Label(window, text="경도")
-lonV = Label(window, text="")
-latL = Label(window, text="위도")
-latV = Label(window, text="")
-iconL = Label(window, image=icon, fg='#FFFFFF')
-iconL.configure(background="gray")
-weatherL = Label(window, text="날씨")
-weatherV = Label(window, text="")
+lonL = Label(window, text="경도", background=backgroudColor)
+lonV = Label(window, text="", background=backgroudColor)
+latL = Label(window, text="위도", background=backgroudColor)
+latV = Label(window, text="", background=backgroudColor)
+iconL = Label(window,image=icon,background=iconBackgroudColor)
+weatherL = Label(window, text="날씨", background=backgroudColor)
+weatherV = Label(window, text="", background=backgroudColor)
 
-countryL = Label(window, text="국가")
-countryV = Label(window, text="")
-cityL = Label(window, text="도시")
-cityV = Label(window, text="")
-tempL = Label(window, text="온도")
-tempV = Label(window, text="")
-humidityL = Label(window, text="습도")
-humidityV = Label(window, text="")
-windSpeedL = Label(window, text="풍속")
-windSpeedV = Label(window, text="")
+countryL = Label(window, text="국가", background=backgroudColor)
+countryV = Label(window, text="", background=backgroudColor)
+cityL = Label(window, text="도시", background=backgroudColor)
+cityV = Label(window, text="", background=backgroudColor)
+tempL = Label(window, text="온도", background=backgroudColor)
+tempV = Label(window, text="", background=backgroudColor)
+humidityL = Label(window, text="습도", background=backgroudColor)
+humidityV = Label(window, text="", background=backgroudColor)
+windSpeedL = Label(window, text="풍속", background=backgroudColor)
+windSpeedV = Label(window, text="", background=backgroudColor)
 
-timeL = Label(window, text="현재시간")
+timeL = Label(window, text="현재시간", background=backgroudColor)
 now = datetime.now()
 now = now.strftime("%Y-%m-%d %H:%M:%S")
-timeV = Label(window, text=now)
-userV = Label(window, text="장성익")
-githubL = Label(window, text=github)
+timeV = Label(window, text=now, background=backgroudColor)
+userV = Label(window, text="장성익", background=backgroudColor)
+githubL = Label(window, text=github, background=backgroudColor)
 
 cityE.grid(row=0, column=0, columnspan=2)
 searchB.grid(row=0, column=2)
